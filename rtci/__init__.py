@@ -4,6 +4,6 @@ RTCI: Real-time configuration interaction using split-operator propagation in py
 
 # core imports
 from .ci import ci
-from .prop import prop
+from rtci.prop.prop import *
 
 __all__ = ['ci','prop','utils']
