@@ -10,9 +10,9 @@ def prop_iter(Cp,U,x,f,E,dt):
     '''
     Cn = np.einsum('i,i->i',np.exp(-1.0j*E*dt),Cp)
     for a in range(3):
-        Cn = np.einsum('kj,j->k',U[a].T,Cn)
+        Cn = np.einsum('kj,j->k',np.conj(U[a]).T,Cn)
         Cn = np.einsum('k,k->k',np.exp(1.0j*x[a]*f[a]*dt),Cn)
-        Cn = np.einsum('ki,k->i',U[a].T,Cn)
+        Cn = np.einsum('ik,k->i',U[a],Cn)
     return Cn
 
 def build_U(trans_list):
