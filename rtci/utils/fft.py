@@ -46,8 +46,6 @@ def FT(data,dt=1,norm=False,n=None):
 
     return freq,FT
 
-
-
 def damp(f, timestep, Tau):
     """
     Dampen a given signal in the time domain using the
