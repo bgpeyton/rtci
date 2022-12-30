@@ -31,6 +31,7 @@ setup(
     license='BSD-3-Clause',
     install_requires=[
         "numpy",
+        "scipy",
     ],
 
     # Which Python importable modules should be included when your package is installed
